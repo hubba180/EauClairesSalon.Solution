@@ -14,6 +14,9 @@
     @Html.LabelFor(model => model.Description)<br>
     @Html.TextBoxFor(model => model.Description, new {required="required"})
   <br>
+    @Html.LabelFor(model => model.City)<br>
+    @Html.TextBoxFor(model => model.City, new {required="required"})
+  <br>
     @Html.LabelFor(model => model.Stylist)<br>
     @Html.DropDownList("StylistId")
   <br>
