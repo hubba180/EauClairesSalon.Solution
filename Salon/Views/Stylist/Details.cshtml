@@ -1,0 +1,28 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Salon.Models; 
+@model Salon.Models.Stylist;
+  
+
+<h2>@Html.DisplayFor(model => model.Name) | Stylist</h2>
+<hr />
+
+
+<ul>
+@if (@Model.Clients.Count == 0)
+{
+  <p>nothing found</p>
+}
+
+@foreach (Client client in @Model.Clients)
+{
+  <li>@Html.ActionLink(@client.Name, "Details", "clients", new { id = client.ClientId})</li>
+}
+</ul>
+
+<p>@Html.ActionLink("Add a client for this stylist", "Create", "Client")</p>
+<p>@Html.ActionLink("Delete this stylist", "Delete", new { id = Model.StylistId})</p>
+<p>@Html.ActionLink("Stylist List", "Index")</p>
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
