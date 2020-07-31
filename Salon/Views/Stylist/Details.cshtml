@@ -6,22 +6,19 @@
 @model Salon.Models.Stylist;
   
 
-<h2>@Html.DisplayFor(model => model.Name) | Stylist</h2>
+<h2>@Html.DisplayFor(model => model.Name) | Eau Claire's Salon Stylist</h2>
 <hr />
-
-
 <ul>
 @if (@Model.Clients.Count == 0)
 {
-  <p>nothing found</p>
+  <p>no clients</p>
 }
-
 @foreach (Client client in @Model.Clients)
 {
-  <li>@Html.ActionLink(@client.Name, "Details", "clients", new { id = client.ClientId})</li>
+  <li>@Html.ActionLink(@client.Name, "Details", "Client", new { id = client.ClientId })</li>
 }
 </ul>
-
+<hr />
 <p>@Html.ActionLink("Add a client for this stylist", "Create", "Client")</p>
 <p>@Html.ActionLink("Delete this stylist", "Delete", new { id = Model.StylistId})</p>
 <p>@Html.ActionLink("Edit this stylist", "Edit", new { id = Model.StylistId})</p>

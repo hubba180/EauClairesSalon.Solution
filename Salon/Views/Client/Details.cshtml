@@ -1,0 +1,15 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Salon.Models.Client
+
+<h2>@Model.Name's Details</h2>
+<hr />
+<h5>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(model => model.Name)</h5>
+<h5>@Html.DisplayNameFor(model => model.Description): @Html.DisplayFor(model => model.Description)</h5>
+<hr />
+<p>@Html.ActionLink("Client List", "Index")</p>
+<p>@Html.ActionLink("Stylist List", "Index", "Stylist")</p> 
+<p>@Html.ActionLink("Edit Client", "Edit", new { id = Model.ClientId })</p>
+<p>@Html.ActionLink("Delete Client", "Delete", new { id = Model.ClientId })</p>
