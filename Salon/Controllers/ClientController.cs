@@ -6,16 +6,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Salon.Controllers
 {
-  public class ClientController : Controllers
+  public class ClientController : Controller
   {
   private readonly SalonContext _db;
-    public ClientController()
+    public ClientController(SalonContext db)
     {
       _db = db;
     }
     public ActionResult Index()
     {
-      List<Cuisine> model = _db.Clients.ToList();
+      List<Client> model = _db.Clients.ToList();
       return View(model);
     }
   }

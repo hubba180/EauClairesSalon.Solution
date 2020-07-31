@@ -24,7 +24,7 @@ namespace Salon
     {
       services.AddMvc();
       services.AddEntityFrameworkMySql()
-        .AddDbContext<BestRestaurantsContext>(options => options
+        .AddDbContext<SalonContext>(options => options
         .UseMySql(Configuration["ConnectionStrings:DefaultConnection"]));
     }
 

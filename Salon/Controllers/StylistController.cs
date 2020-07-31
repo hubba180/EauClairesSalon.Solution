@@ -8,13 +8,14 @@ namespace Salon.Controllers
 {
   public class StylistController : Controller
   {
-    public StylistController()
+    private readonly SalonContext _db;
+    public StylistController(SalonContext db)
     {
       _db = db;
     }
     public ActionResult Index()
     {
-      List<Cuisine> model = _db.Stylists.ToList();
+      List<Stylist> model = _db.Stylists.ToList();
       return View(model);
     }
   }
