@@ -5,17 +5,19 @@
 @using Salon.Models;
 @model List<Salon.Models.Client>;
 
+<div class="text-center container">
   <h1>Clients</h1>
   <hr />
-@if (@Model.Count == 0)
-{
-  <p>You don't have any clients.</p>
-}
+  @if (@Model.Count == 0)
+  {
+    <p>You don't have any clients.</p>
+  }
 
-@foreach (Client client in Model)
-{
-  <li>@Html.ActionLink(client.Name, "Details", new { id = client.ClientId}) </li>
-}
-<hr />
-@Html.ActionLink("Create a client", "Create")<br>
-@Html.ActionLink("Home", "Index", "Home")
+  @foreach (Client client in Model)
+  {
+    <li>@Html.ActionLink(client.Name, "Details", new { id = client.ClientId}) </li>
+  }
+  <hr />
+  @Html.ActionLink("Create a client", "Create")<br>
+  @Html.ActionLink("Home", "Index", "Home")
+</div>

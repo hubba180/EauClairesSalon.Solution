@@ -3,7 +3,7 @@
 }
 
 @model Salon.Models.Client
-
+<div class="text-center container">
 <h3>Are you sure you want to delete @Model.Name as a client?</h3>
 
 @using (Html.BeginForm())
@@ -11,3 +11,4 @@
   <input type="submit" value="Delete" />
 }
 @Html.ActionLink("Client List", "Index")
+</div>

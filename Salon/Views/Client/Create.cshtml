@@ -3,22 +3,23 @@
 }
 
 @model Salon.Models.Client
+<div class="text-center container">
+  <h4>Add a new restaurant</h4>
 
-<h4>Add a new restaurant</h4>
-
-@using (Html.BeginForm())
-{
-  @Html.LabelFor(model => model.Name)<br>
-  @Html.TextBoxFor(model => model.Name, new {required="required"})
-<br>
-  @Html.LabelFor(model => model.Description)<br>
-  @Html.TextBoxFor(model => model.Description, new {required="required"})
-<br>
-  @Html.LabelFor(model => model.Stylist)<br>
-  @Html.DropDownList("StylistId")
-<br>
-<br>
-  <input type="submit" value="Add Client" class="btn btn-primary" />
-}
-<br>
-<p>@Html.ActionLink("Client List", "Index")</p>
+  @using (Html.BeginForm())
+  {
+    @Html.LabelFor(model => model.Name)<br>
+    @Html.TextBoxFor(model => model.Name, new {required="required"})
+  <br>
+    @Html.LabelFor(model => model.Description)<br>
+    @Html.TextBoxFor(model => model.Description, new {required="required"})
+  <br>
+    @Html.LabelFor(model => model.Stylist)<br>
+    @Html.DropDownList("StylistId")
+  <br>
+  <br>
+    <input type="submit" value="Add Client" class="btn btn-primary" />
+  }
+  <br>
+  <p>@Html.ActionLink("Client List", "Index")</p>
+</div>

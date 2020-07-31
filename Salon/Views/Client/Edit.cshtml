@@ -3,19 +3,20 @@
 }
 
 @model Salon.Models.Client
+<div class="text-center container">
+  <h2>Edit @Model.Name</h2>
+  <br>
+  @using (Html.BeginForm())
+  {
+    @Html.HiddenFor(model => model.ClientId)
+    @Html.LabelFor(model => model.Name)
+    @Html.EditorFor(model => model.Name)
+    @Html.LabelFor(model => model.Description)
+    @Html.EditorFor(model => model.Description)
+    @Html.LabelFor(model => model.Stylist)
+    @Html.DropDownList("StylistId")
+    <input type="submit" value="Save" />
+  }
 
-<h2>Edit @Model.Name</h2>
-<br>
-@using (Html.BeginForm())
-{
-  @Html.HiddenFor(model => model.ClientId)
-  @Html.LabelFor(model => model.Name)
-  @Html.EditorFor(model => model.Name)
-  @Html.LabelFor(model => model.Description)
-  @Html.EditorFor(model => model.Description)
-  @Html.LabelFor(model => model.Stylist)
-  @Html.DropDownList("StylistId")
-  <input type="submit" value="Save" />
-}
-
-<p>@Html.ActionLink("Client List", "Index")</p>
+  <p>@Html.ActionLink("Client List", "Index")</p>
+</div>

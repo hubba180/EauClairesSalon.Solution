@@ -3,12 +3,18 @@
 }
 
 <h1 class="jumbotron text-center">Eau Claire's Salon Network</h1>
-<div class="intro">
-  <p>Keep better more efficient track of your clients and prefered stylists by utilizing the links below:</p>
-</div>
+<div class="container">
+  <div class="intro">
+    <p>Keep better more efficient track of your clients and prefered stylists by utilizing the links below:</p>
+  </div>
 
-<div class="text-center">
-  @Html.ActionLink("Track your clients", "Index", "Client")<br>
+  <div class="text-center">
+    <div class="float">
+      @Html.ActionLink("Track your clients", "Index", "Client")
+    </div>
+    <div class="float">
+      @Html.ActionLink("Track your stylists", "Index", "Stylist")
+    </div>
 
-  @Html.ActionLink("Track your stylists", "Index", "Stylist")
+  </div>
 </div>

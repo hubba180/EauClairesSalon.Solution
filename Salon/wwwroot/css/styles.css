@@ -7,5 +7,11 @@
 }
 
 .body-style {
-  background-image: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  /* background-image: linear-gradient(0.05turn, #2da8dd, #ebf8e1, #f58916); */
+  background-color: red;
+}
+
+.float {
+  display: inline-block;
+  margin-right: 15px;
 }
