@@ -2,9 +2,13 @@
   Layout = "_Layout";
 }
 
-<h1>Eau Claire's Salon Network</h1>
+<h1 class="jumbotron text-center">Eau Claire's Salon Network</h1>
+<div class="intro">
+  <p>Keep better more efficient track of your clients and prefered stylists by utilizing the links below:</p>
+</div>
 
+<div class="text-center">
+  @Html.ActionLink("Track your clients", "Index", "Client")<br>
 
-@Html.ActionLink("Track your clients", "Index", "Client")<br>
-
-@Html.ActionLink("Track your stylists", "Index", "Stylist")
+  @Html.ActionLink("Track your stylists", "Index", "Stylist")
+</div>
