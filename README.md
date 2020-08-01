@@ -1,9 +1,5 @@
 **<h1 align = "center"> Eau Claire's Salon**
 
-<h1 align="center">
-  <!-- <img width="800" height="487" src="https://coding-assets.s3-us-west-2.amazonaws.com/img/best_restaurants.png"> -->
-</h1>
-
 
 **<h3 align="center">Keep track of your network of stylists and their clients!**
 
@@ -42,7 +38,7 @@ _Better description here_
 
 copy this url to clone this project to your local system:
 ```html
-https://github.com/hubba180/repohere
+https://github.com/hubba180/EauClairesSalon.Solution
 ```
 
 <br>
