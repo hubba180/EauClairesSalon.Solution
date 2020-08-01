@@ -105,12 +105,6 @@ _by default these are set to user:root and an empty password. if you are unsure,
 
 <br>
 
-## **📫 QUESTIONS AND CONCERNS**
-
-_Questions, comments and concerns can be directed to the author [Tristan Emmerson](tristan@stickerslug.com)_
-
-<br>
-
 ## **🔧Technologies Used**
 
 _**Written in:** [Visual Studio Code](https://code.visualstudio.com/)_
