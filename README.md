@@ -54,21 +54,30 @@ With the project open to the root directory, navigate to the production director
 cd ProjectName
 ```
 
+Next we'll need to import the sql database by:
+* Going into SQL workbench and In the _Navigator > Administration window_, select _Data Import/Restore_ 
+* In _Import Options_ select _Import from Self-Contained File_.
+* Under _Default Schema to be Imported To_, select the _New_ button and enter: 
+
+```js
+kyle_hubbard
+```
+* Click _OK_, then _Start Import_
+* Make sure to update appsettings.json file with your local SQL password here:
+
+```js
+pwd=password
+```
+
 Then, install the necessary packages with the following command
 ```js 
 dotnet restore 
 ```
-
 Finally, you can start the program with this command.
 ```js 
 dotnet run 
 ```
 
-![cloning](https://coding-assets.s3-us-west-2.amazonaws.com/img/dotnet-readme.gif "How to clone repo")
-
-[w-top]:https://github.com/ryanoasis/nerd-fonts/wiki/screenshots/v1.0.x/windows-pass-sm.png "↓ Windows Compatibility Status ↓"
-[l-top]:https://github.com/ryanoasis/nerd-fonts/wiki/screenshots/v1.0.x/linux-pass-sm.png "↓ Linux Compatibility Status ↓"
-[m-top]:https://github.com/ryanoasis/nerd-fonts/wiki/screenshots/v1.0.x/mac-pass-sm.png "↓ macOS (OSX) Compatibility Status ↓"
 ## **PROTECTING YOUR DATA**
 
 #### **Step 1: From within VSCode in the root project directory, we will create a .gitignore file**
