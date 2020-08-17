@@ -20,9 +20,17 @@ namespace Salon.Controllers
       return View(model);
     }
     public ActionResult Create()
-    {
-      ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "Name");
-      return View();
+    { 
+      List<Stylist> model = _db.Stylists.ToList();
+      if (model.Count != 0)
+      {
+        ViewBag.StylistId = new SelectList(_db.Stylists, "StylistId", "Name");
+        return View();
+      }
+      else
+      {
+        return RedirectToAction("Index");
+      }
     }
     [HttpPost]
     public ActionResult Create(Client client)
